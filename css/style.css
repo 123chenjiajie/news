@@ -9,6 +9,10 @@ li{
 a{
     text-decoration: none;
 }
+.container{
+	width:1190px;
+	margin: 0 auto;
+}
 .clearfix:after{
     content: "";
     display: table;
