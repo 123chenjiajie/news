@@ -1,0 +1,295 @@
+/*通用样式*/
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*通用样式*/
+/*admin 页面样式*/
+.admin{
+    background: #f2f2f2;
+    color:#666666;
+}
+.admin header{
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+.admin header .container a{
+    float: right;
+    color: #666666;
+}
+.admin .main{
+    background: #fff;
+    padding-top: 10px;
+}
+.admin .main ul{
+    height: 38px;
+    line-height:38px;
+}
+.admin .main li{
+    border-right:1px solid #e6e6e6;
+    font-size: 14px;
+}
+.admin .main .mr14{
+    margin-right: 14px;
+}
+.admin .main .list-tit{
+margin-top: 20px;
+    border: 1px solid #e6e6e6;
+}
+.admin .main .list-tit ul{
+    background: #f2f2f2;
+    margin-bottom: 0;
+}
+.admin .main .list-tit ul li{
+    float: left;
+    width: 148px;
+    text-align: center;
+}
+
+.admin .main .list-tit ul li:nth-of-type(1){
+    width: 100px;
+}
+.admin .main .list-tit ul li:last-of-type{
+    border-right: none;
+}
+.admin .main .list-text{
+    border:1px solid #e6e6e6;
+    border-top:none;
+}
+.admin .main .list-text ul{
+    margin:0;
+}
+.admin .main .list-text ul li{
+    float: left;
+    width: 148px;
+    text-align: center;
+}
+.admin .main .list-text ul li:nth-of-type(1){
+    width: 100px;
+}
+.admin .main .list-text ul li:last-of-type{
+    border-right: none;
+}
+.admin .main .list-text button{
+line-height: 0;
+    height:20px;
+    width: 50px;
+}
+
+
+
+
+/*添加数据样式*/
+.admin .adds,.admin .edit{
+    padding-top: 122px;
+    padding-left: 524px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0,.5);
+    background-size: 100%;
+    display: none;
+}
+.admin .add,.admin .edit .add{
+    width: 550px;
+    height: 550px;
+    background: white;
+}
+
+.admin .add header,.admin .edit .add header{
+    height: 40px;
+    background: #20222a;
+    line-height:40px;
+    padding-left:10px;
+    color: #fff;
+}
+.admin .add header span,.admin .edit .add header span{
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.admin .add .main,.admin .edit .add .main{
+	height: 465px;
+	overflow:auto;
+}
+.admin .add .main span,.admin .edit .add .span{
+    width:100px;
+    display: inline-block;
+    text-align: right;
+    margin-right:15px;
+}
+.admin .add .main textarea,.admin .edit .add .main textarea{
+    height:100px;
+    width: 245px;
+	outline:none;
+	resize:none;
+	line-height: 1.5;
+}
+.admin .add .main .box,.admin .edit .add .main .box{
+	 width: 20px;
+}
+.admin .add .main input,.admin .edit .add .main input{
+    width: 245px;
+}
+.admin .add .main .txs p,.admin .add .main .txs textarea,.admin .edit .add .main.txs p,.admin .edit .add .main .txs textarea{
+	float: left;
+}
+   
+.admin .add .main,.admin .edit .add .main{
+    padding-top:30px;
+    padding-left:20px;
+    padding-right:20px;
+}
+.admin .add .main>div,.admin .edit .add .main>div{
+/*    height:40px;*/
+    line-height:40px;
+    margin-bottom:15px;
+}
+
+/*添加数据样式*/
+
+
+/*admin 页面样式*/
+/*index 页面样式*/
+a:hover{
+    text-decoration: none;
+}
+nav li{
+    list-style: none;
+}
+.header-top ul,.header-top nav li,.header-bottom div,
+.header-bottom div img,.header-bottom div h2,
+main nav li{
+    float:left;
+}
+.header-top ul:nth-of-type(2),.header-bottom div:nth-of-type(2){
+    float: right;
+}
+/*通用样式*/
+
+/*header-top_nav*/
+.header-top{
+    background-color: #fafafa;
+    border-bottom: 1px #e9e9e9 solid;
+    height:38px;
+}
+.header-top nav{
+    padding-top: 7px;
+}
+.header-top nav li{
+    padding:0px 8px;
+    font-size: 15px;
+}
+.header-top ul:nth-of-type(1) li:nth-of-type(7),
+.header-top ul:nth-of-type(2) li:nth-of-type(2){
+    border-right: 1px #ccc solid;
+    height:16px;
+    margin-top: 3px;
+}
+.header-top ul:nth-of-type(1) li:nth-of-type(7) a,
+.header-top ul:nth-of-type(2) li:nth-of-type(2) a{
+    margin-top: -3px;
+    display: block;
+}
+.header-top ul:nth-of-type(2) li:nth-of-type(4){
+    padding-left: 2px;
+}
+.header-top nav img{
+    margin-top: -5px;
+}
+.header-top a{
+    color: #6a6a6a;
+}
+.header-top a:hover{
+    color: #000;
+}
+/*header*/
+
+header{
+    background-image: url(../img/header.jpg);
+    height: 184px;
+    width: 100%;
+    background-size: cover;
+}
+/*header*/
+
+/*main*/
+main{
+    margin-top: 10px;
+    border-top:#cb0d0d 3px solid;
+}
+.main-top{
+    padding-bottom: 5px;
+    border-bottom: 1px #cecece solid;
+}
+main nav{
+    padding-top: 5px;
+}
+main nav li a{
+    font-size: 15px;
+    padding: 8px 20px;
+    color: #252525;
+}
+main nav li:nth-of-type(1) a{
+    color: #fff;
+    background-color: #dc0000;
+}
+main nav li a:hover{
+    color: #fff;
+    background-color: #dc0000;
+}
+.main-center{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.main-center h4{
+    font-weight: bold;
+}
+.main-center .num{
+    padding-left: 30px;
+    width: 100%;
+    border-bottom: #dad9d9 1px solid;
+}
+main .right div{
+    margin-top: 30px;
+}
+/*新闻样式*/
+#apps{
+    margin-top: 20px;
+    
+}#apps p{
+    color:#959292;
+    word-wrap:break-word
+    
+}
+#apps h3{
+    margin-bottom: 10px;
+/*    border-bottom: 1px solid #cecece;*/
+}
+#apps li{
+    border: 1px solid #cecece;
+    margin-bottom: 30px;
+    padding: 10px;
+    
+}
+.bor-b{
+/*    border-bottom: 1px solid #cecece;*/
+}
+
+
+/*index 页面样式*/
+

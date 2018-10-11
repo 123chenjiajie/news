@@ -2,9 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>admin</title>
+    <title>腾讯新闻后台</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-后台
+<body class="admin">
+<div id="app">
+   <!--  添加弹出的框-->
+    <div class="adds">
+        <div class="add">
+            <header>添加文章
+            <span @click="close">X</span>
+            </header>
+            <div class="main">
+                <div><span>文章标题</span><input name="ad" type="text" placeholder="请输入标题" v-model="addtit"></div>
+                <div><span>发布人 </span><input name="ad" type="text" placeholder="请输入用户名" v-model="addauthor"></div>
+                <div class="txs clearfix">
+                <p><span>文章内容 </span></p>
+                <textarea height="40px" width="200px" v-model="addtxt">>默认出现文本</textarea>
+                </div>
+                <div>
+                <span>标签 </span>
+                
+                <select v-model="addlab">
+    <option disabled value="">请选择</option>
+    <option>历史</option>
+    <option>娱乐</option>
+    <option>军事</option>
+    <option>其他</option>
+  </select>
+                </div>
+                <div>
+                <span>发布状态</span>
+                
+<!--                <input name="ad" type="text" placeholder="发布状态" v-model="addstate">-->
+                <input type="checkbox" class="box" v-model="addstate">
+                </div>
+                <button @click="aee">确认</button>
+            </div>
+        </div>
+    </div>
+<!--  添加弹出的框-->
+<!--编辑弹出的框-->
+    <div class="edit">
+        <div class="add">
+            <header>编辑文章
+            <span @click="delss">X</span>
+            </header>
+            <div class="main">
+                <div><span>文章标题</span><input name="ad" type="text" placeholder="请输入标题"v-model="addtit1"></div>
+                <div><span>发布人 </span><input name="ad" type="text" placeholder="请输入用户名" v-model="addauthor1"></div>
+                <div class="txs clearfix">
+                <p><span>文章内容 </span></p>
+                <textarea height="40px" width="200px" v-model="addtxt1">>默认出现文本</textarea>
+                </div>
+                <div>
+                <span>标签 </span>
+        <select v-model="addlab1">
+    <option disabled value="">请选择</option>
+    <option>历史</option>
+    <option>娱乐</option>
+    <option>军事</option>
+    <option>其他</option>
+  </select>
+                </div>
+                <div>
+                <span>发布状态</span>
+                <input type="checkbox" class="box" v-model="addstate1">
+                </div>
+                <button @click="confirm()">确认</button>
+            </div>
+        </div>
+    </div>
+<!--编辑弹出的框-->
+<header>
+   <div class="container">
+    腾讯新闻
+    <a href="index.html">前台页面</a>
+   </div>
+</header>
+<div class="main">
+    <div class="container">
+      <div>
+          <button type="button" class="btn btn-primary mr14" @click="dels">删除</button>
+        <button type="button" class="btn btn-primary" @click="add">添加</button>
+      </div>
+       <div class="list">
+           <div class="list-tit">
+               <ul class="clearfix">
+                   <li><input type="checkbox" class="box" id="all" @click="alls"></li>
+                   <li>文章ID</li>
+                   <li>文章标签</li>
+                   <li>文章标题</li>
+                   <li>作者</li>
+                   <li>上传时间</li>
+                   <li>发布状态</li>
+                   <li>操作</li>
+               </ul>
+           </div>
+           <div class="list-text">
+               <ul class="clearfix" v-for="(list,index) in lists">
+                   <li>
+                   <input type="checkbox" class="box" name="as">
+                   </li>
+                   <li>{{index}}</li>
+                   
+                   <li>{{list.lab}}</li>
+                   
+                   <li>{{list.tit}}</li>
+                   <li>{{list.author}}</li>
+                   <li>{{list.time}}</li>
+                   <li>{{list.state}}</li>
+                   <li>
+                       <button @click="modify(index)">编辑</button>
+                       <button @click="del(index)">删除</button>
+                   </li>
+               </ul>
+           </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+   <script src="https://cdn.bootcss.com/autosize.js/4.0.2/autosize.min.js"></script>
+
+<script src="js/script.js"></script>
 </body>
 </html>

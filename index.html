@@ -2,9 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>news</title>
+    <title>腾讯新闻</title>
+    <!--栅格化-->
+    <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet">
+    <!--字体图标-->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-前台
+<body class="index">
+<header></header>
+<main id="app">
+    <div class="main-top">
+        <nav class="clearfix container">
+            <li><a href="">首页</a></li>
+            <li><a href="">中国</a></li>
+            <li><a href="">国际</a></li>
+            <li><a href="">娱乐</a></li>
+            <li><a href="">经济</a></li>
+            <li><a href="">历史</a></li>
+            <li><a href="">谷雨</a></li>
+            <li><a href="">公益</a></li>
+            <li><a href="">文化</a></li>
+            <li><a href="">旅游</a></li>
+            <li><a href="">视频</a></li>
+            <li><a href="">新闻哥</a></li>
+        </nav>
+    </div>
+</main>
+
+<div class="news" id="apps">
+<div class="container">
+	<ul>
+    <h3>历史</h3>
+	    <li v-for="arr in arrs" v-if="arr.state==true && arr.lab=='历史'" class="bor-b">
+            <div class="clearfix">
+	            <h4>{{arr.tit}}</h4>
+	            <p>{{arr.txt}}</p>
+	            <span class="float-right">
+	            发布人：
+	            {{arr.author}}</span>
+	            <br>
+	            <span class="float-right">{{arr.time}}</span>
+	       </div>
+	    </li>
+	   
+	    <h3>娱乐</h3>
+	    <li v-for="a in arrs" v-if="a.state==true && a.lab=='娱乐'" class="clearfix bor-b">
+	         <h4>{{a.tit}}</h4>
+	            <p>{{a.txt}}</p>
+	            <span class="float-right">发布人：{{a.author}}</span>
+	            <br>
+	            <span class="float-right">{{a.time}}</span>
+	    </li>
+	    <h3>其他</h3>
+	     <li v-for="a in arrs" v-if="a.state==true && a.lab=='其他'" class="clearfix bor-b">
+	         <h4>{{a.tit}}</h4>
+	            <p>{{a.txt}}</p>
+	            <span class="float-right">发布人：{{a.author}}</span>
+	            <br>
+	            <span class="float-right">{{a.time}}</span>
+	    </li>
+	    <h3>军事</h3>
+	     <li v-for="a in arrs" v-if="a.state==true && a.lab=='军事'" class="clearfix bor-b">
+	         <h4>{{a.tit}}</h4>
+	            <p>{{a.txt}}</p>
+	            <span class="float-right">发布人：{{a.author}}</span>
+	            <br>
+	            <span class="float-right">{{a.time}}</span>
+	    </li>
+	</ul>
+</div>
+</div>
+<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+<script src="js/script1.js"></script>
 </body>
 </html>
